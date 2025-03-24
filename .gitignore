@@ -28,15 +28,8 @@ logs/
 # VS Code files (if using VS Code)
 .vscode/
 
-# JetBrains (PyCharm) files
-.idea/
 
-# Mac OS files
-.DS_Store
 
-# Node.js files (if using npm or React)
-node_modules/
-
-# Migrations (optional, if you want to exclude generated migration files)
+# Migrations
 **/migrations/*.py
 !**/migrations/__init__.py  # Keep __init__.py
