@@ -1,0 +1,42 @@
+# Virtual environment
+venv/
+env/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Django-specific files
+*.sqlite3
+db.sqlite3
+media/  # Ignore user-uploaded files
+
+# Environment variables & secrets
+.env
+*.env
+config/settings_local.py  # If using a local settings file
+
+# Logs
+logs/
+*.log
+
+# Compiled files
+*.pyc
+*.pyo
+*.pyd
+
+# VS Code files (if using VS Code)
+.vscode/
+
+# JetBrains (PyCharm) files
+.idea/
+
+# Mac OS files
+.DS_Store
+
+# Node.js files (if using npm or React)
+node_modules/
+
+# Migrations (optional, if you want to exclude generated migration files)
+**/migrations/*.py
+!**/migrations/__init__.py  # Keep __init__.py
