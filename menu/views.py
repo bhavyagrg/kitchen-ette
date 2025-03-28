@@ -1,10 +1,17 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import MenuItem
+from .models import Menu
 
-def menu_list(request):
-    items = MenuItem.objects.all()
-    return render(request, 'menuList.html', {'items': items})
+from itertools import groupby
+
+def menu_view(request):
+    menu_items = Menu.objects.all().order_by('category')
+    grouped_menu = {k: list(v) for k, v in groupby(menu_items, key=lambda x: x.category)}
+    context = {
+        'menu_items': grouped_menu,
+    }
+    return render(request, 'menu.html', context)
+
 
 
 def home(request):
