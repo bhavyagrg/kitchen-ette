@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Literata:opsz@7..72&family=Poppins:wght@400;600&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&family=Literata:opsz@7..72&family=Poppins:wght@400;600&family=Roboto&display=swap");
+
+section#about-us {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#background3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -5;
+  background-color: black;
+  overflow: hidden;
+}
+
+section#about-us .wrapper {
+  height:80%;
+  /* background-color: blueviolet; */
+  align-items: center;
+  width: 80%;
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+section#about-us .wrapper #background3 img {
+  max-width: 100vw;
+  height: auto;
+  filter: opacity(30%);
+}
+
+section#about-us .wrapper .header {
+  width:100%;
+  flex:0.8;
+  /* background-color: rgb(49, 28, 205); */
+  justify-content: start;
+  align-items: center;
+  text-align: left;
+}
+
+section#about-us .wrapper .header h4{
+  font-family: "Gothic A1", sans-serif;
+  font-size: 40px;
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 2.1px;
+  text-decoration-line: underline;
+  margin-left: 8%;
+}
+
+section#about-us .wrapper .image{
+  justify-content: center;
+  /* background-color: aqua; */
+  display: flex;
+    width: 100%;
+    flex:7;
+    align-items: center;
+}
+
+section#about-us .wrapper .image img{
+  width: 65%;
+  filter: drop-shadow(0 0 60px  rgb(78, 33, 8));
+}
+
+section#about-us .wrapper .content{
+  /* background-color: rgb(134, 199, 37); */
+  display:flex;
+  flex:1;
+  justify-content: center;
+}
+
+section#about-us .wrapper .content p{
+  color: #D5D5D5;
+text-align: justify;
+font-family: Gothic A1;
+font-size: 18.5px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 2.1%;
+width:84%;
+/* background-color: rgb(215, 31, 31); */
+}
+
+#carouselExampleIndicators {
+  display: flex; 
+  flex:0.5;
+  
+}

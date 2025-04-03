@@ -3,14 +3,14 @@ from django.http import HttpResponse
 from .models import Menu
 
 from itertools import groupby
+from collections import defaultdict
 
 def menu_view(request):
-    menu_items = Menu.objects.all().order_by('category')
-    grouped_menu = {k: list(v) for k, v in groupby(menu_items, key=lambda x: x.category)}
-    context = {
-        'menu_items': grouped_menu,
-    }
-    return render(request, 'menu.html', context)
+    items = Menu.objects.all()
+    menu_items = defaultdict(list)
+    for item in items:
+        menu_items[item.category].append(item)
+    return render(request, 'menu.html', {'menu_items': dict(menu_items)})
 
 
 
