@@ -60,7 +60,26 @@
                 <div class="item-box"
                     id="{% if category == 'Main Course' %}main-course{% elif category == 'Parantha' %}prantha-menu{% elif category == 'Beverages' %}bevrages-menu{% elif category == 'Others' %}others-menu{% endif %}">
                     <div class="header">
-                        <h3>{{ category|title }}</h3>
+                        <div>
+                            {% if category == 'Main Course' %}
+                            <!-- Main Course SVG -->
+                            {% include 'partials/main_course.svg' %}
+
+                            <!-- Parantha SVG -->
+                            {% elif category == 'Parantha' %}
+                            {% include 'partials/parantha.svg' %}
+
+                            <!-- Beverages SVG -->
+                            {% elif category == 'Beverages' %}
+                            {% include 'partials/beverages.svg' %}
+
+                            <!-- Others SVG -->
+                            {% elif category == 'Others' %}
+                            {% include 'partials/others.svg' %}
+
+                            {% endif %}
+                            {{ category|title }}
+                        </div>
                     </div>
                     <div class="items">
                         <ul>
