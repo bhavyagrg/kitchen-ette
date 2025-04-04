@@ -5,6 +5,9 @@ from .models import Menu
 from itertools import groupby
 from collections import defaultdict
 
+from django.contrib.auth.decorators import login_required
+
+@login_required
 def menu_view(request):
     items = Menu.objects.all()
     menu_items = defaultdict(list)
