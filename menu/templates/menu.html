@@ -117,6 +117,48 @@
             </div>
         </section>
 
+        <!-- Cart -->
+        <section id="cart">
+            <div id="background">
+                <img src="{% static 'images/home_pg_img.jpg' %}" />
+            </div>
+            <div class="wrapper">
+
+                <div class="my-order">
+                    <h6>My Order</h6>
+                </div>
+
+                <div class="middle-container">
+                    <div class="line"></div>
+
+                    <!-- This will have the items which are present in the cart -->
+                    <div class="container">
+                        <ul class="order-items">
+                            <li class="order-item" id="first-row">
+                                <div class="s-no">S. No.</div>
+                                <div class="it-name">Item Name</div>
+                                <div class="it-price">Price</div>
+                                <div class="qty">Quantity</div>
+                                <div class="amount">Amount</div>
+                            </li>
+                            <div class="line" id="inline"></div>
+                        </ul>
+                    </div>
+
+                    <div class="totalAm-container">
+                        <h6 class="TotalAmount">Total Amount :</h6>
+                        <h6 class="Sum">00</h6>
+                    </div>
+
+                    <div class="line"></div>
+                </div>
+
+                <div class="order-button">
+                    <button class="order-now">Place Order</button>
+                </div>
+            </div>
+        </section>
+
     </main>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
