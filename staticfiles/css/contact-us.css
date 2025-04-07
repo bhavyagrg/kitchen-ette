@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Literata:opsz@7..72&family=Poppins:wght@400;600&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Gothic+A1&family=Literata:opsz@7..72&family=Poppins:wght@400;600&family=Roboto&display=swap");
+
+section#contact-us{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: "Gothic A1", sans-serif;
+    font-size: 1.5rem;
+    color: white;
+    letter-spacing: 2px;
+    background-color: rgba(145, 145, 145, 0.42);
+}
+
+section#contact-us .container{
+    width: 95%;
+    height: 80%;
+    display: flex;
+}
+
+section#contact-us .container .phone{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section#contact-us .container .email{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
