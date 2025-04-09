@@ -73,11 +73,10 @@ LOGIN_URL = '/accounts/login/'  # Redirect here if not logged in
 LOGIN_REDIRECT_URL = '/menu/'   # Redirect here after login
 LOGOUT_REDIRECT_URL = '/accounts/login/'  # Redirect after logout
 
-ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
-ACCOUNT_EMAIL_REQUIRED = True
-ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_LOGIN_METHODS = {'email'}
+ACCOUNT_SIGNUP_FIELDS = ['email', 'username*', 'password1*', 'password2*']
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -159,10 +158,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+
 STATICFILES_DIRS = [
-    BASE_DIR / "staticfiles",
+    BASE_DIR / "static",
 ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
@@ -172,5 +174,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 
-ACCOUNT_EMAIL_VERIFICATION = "none"
-ACCOUNT_EMAIL_REQUIRED = False
+
