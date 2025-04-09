@@ -8,8 +8,8 @@ class MenuConfig(AppConfig):
     name = 'menu'
 
     def ready(self):
-        if os.environ.get('RUN_MAIN') != 'true':
-            return
+        # if os.environ.get('RUN_MAIN') != 'true':
+        #     return
 
         try:
             from django.contrib.auth import get_user_model
