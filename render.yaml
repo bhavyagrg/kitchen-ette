@@ -8,6 +8,13 @@ services:
       - key: DJANGO_SETTINGS_MODULE
         value: kitchenette.settings
     migrationsCommand: |
-      python manage.py migrate
-      python manage.py loaddata menu_data.json
-      python manage.py createinitialsuperuser
+      echo "======== MIGRATING DB ========"
+      python manage.py migrate || echo "Migration failed"
+
+      echo "======== LOADING DATA ========"
+      python manage.py loaddata menu_data.json || echo "Loaddata failed"
+
+      echo "======== CREATING SUPERUSER ========"
+      python manage.py createinitialsuperuser || echo "Superuser creation failed"
+
+      echo "======== DONE ========"
