@@ -94,7 +94,6 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'kitchenette.urls'
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 TEMPLATES = [
     {
