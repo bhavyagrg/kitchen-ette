@@ -2,16 +2,12 @@ services:
   - type: web
     name: kitchenette
     env: python
-    buildCommand: "pip install -r requirements.txt"
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py collectstatic --noinput
+      python manage.py makemigrations
+      python manage.py migrate
     startCommand: "gunicorn kitchenette.wsgi:application"
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: kitchenette.settings
-    migrationsCommand: |
-      echo "======== MIGRATING DB ========"
-      python manage.py migrate || echo "Migration failed"
-
-      echo "======== CREATING SUPERUSER ========"
-      python manage.py createinitialsuperuser || echo "Superuser creation failed"
-
-      echo "======== DONE ========"
